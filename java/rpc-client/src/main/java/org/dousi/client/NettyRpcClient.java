@@ -7,7 +7,6 @@ import io.netty.channel.*;
 import io.netty.channel.nio.NioEventLoopGroup;
 import io.netty.channel.socket.SocketChannel;
 import io.netty.channel.socket.nio.NioSocketChannel;
-
 import java.io.IOException;
 import java.lang.reflect.Proxy;
 import java.nio.ByteOrder;
@@ -92,6 +91,7 @@ public class NettyRpcClient implements DousiRpcClient {
         }
     }
 
+    @SuppressWarnings("unchecked")
     @Override
     public <T> T newStub(Class<T> serviceClz) {
         return (T) Proxy.newProxyInstance(

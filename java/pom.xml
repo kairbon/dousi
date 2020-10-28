@@ -12,6 +12,7 @@
         <module>rpc-client</module>
         <module>rpc-server</module>
         <module>examples</module>
+        <module>codec</module>
     </modules>
 
     <dependencies>
